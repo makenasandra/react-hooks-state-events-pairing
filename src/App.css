@@ -1,3 +1,12 @@
-.button {
+/* Add top margin to the "Hide Comments" button */
+button.hide-comments {
     margin-top: 20px; /* Adjust the value as needed */
 }
+button.votes {
+    margin-top: 2px; /* Adjust the value as needed */
+}
+/* Style for the page divider */
+.page-divider {
+    border-top: 2px solid #ccc; /* Adjust color and thickness as needed */
+    margin-top: 20px; /* Adjust spacing as needed */
+  }

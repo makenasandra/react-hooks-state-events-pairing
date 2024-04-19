@@ -39,6 +39,11 @@ const videos = [
       user: "gaeron",
       comment: "What a great tutorial!",
     },
+    {
+      id: 3,
+      user: "hooks",
+      comment: "What a great video!",
+    }
   ],
 },
 {
@@ -60,7 +65,18 @@ const videos = [
       user: "gaeron",
       comment: "What a great tutorial!",
     },
+    {
+      id: 3,
+      user: "riri",
+      comment: "What a great tutorial!",
+    },
+    {
+      id: 4,
+      user: "june",
+      comment: "What a great tutorial!",
+    }
   ],
+
 }
 ];
 
