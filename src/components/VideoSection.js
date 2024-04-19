@@ -3,10 +3,11 @@ import CommentsSection from "./CommentsSection";
 
 
 function VideoSection({ videoDetails }) {
-    const { title, embedUrl, views, createdAt, upvotes, downvotes, comments} = videoDetails;
+    const { id, title, embedUrl, views, createdAt, upvotes, downvotes, comments} = videoDetails;
     const [upVotes, setUpvotes] = useState(upvotes);
     const [downVotes, setDownvotes] = useState(downvotes);
     const [showComments, setShowComments] = useState(true);
+    const [commentUpVotes, setCommentDownVotes] = useState(0)
 
     function handleUpVoteClick(){
         setUpvotes(upvotes+1);
@@ -35,7 +36,7 @@ function VideoSection({ videoDetails }) {
         <button className="hide-comments" onClick={handleCommentsButton}>{showComments? "Hide Comments": "Show Comments"}</button>
         </div>
         <hr className="page-divider" /> {/* Divider */}
-        {showComments? <CommentsSection comments={comments}/>: <></>}
+        {showComments? <CommentsSection videoId={id} comments={comments} commentUpVotes={commentUpVotes} setCommentDownVotes={setCommentDownVotes}/>: <></>}
     </div>
 
 
