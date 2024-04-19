@@ -14,7 +14,7 @@ function CommentsSection({videoId, commentId, commentUpVotes, setCommentDownVote
             localStorage.setItem(`${id}`, JSON.stringify({upVotes: upVotes+1,downVotes:0}))
         }
       
-        console.log(JSON.parse(localStorage.getItem(id))["upVotes"]);
+        // console.log(JSON.parse(localStorage.getItem(id))["upVotes"]);
 
     }
     function handleDownVotesClick() {

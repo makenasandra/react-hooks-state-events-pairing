@@ -15,7 +15,7 @@ function CommentsSection({ videoId, comments, commentUpVotes, setCommentDownVote
         )
     })
     return (
-        <div>
+        <div className="comments-section">
             <h2>{comments.length} Comments</h2>
             {commentsList}
         </div>
