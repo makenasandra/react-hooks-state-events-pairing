@@ -50,7 +50,7 @@ const videos = [
   id: 3,
   title: "How Our Team is Using React Native to Save the World | Tania Papazafeiropoulou",
   embedUrl: "https://www.youtube.com/embed/zVHWugBPGBE",
-  views: 730707,
+  views: 140707,
   createdAt: "Oct 26, 2018",
   upvotes: 9210,
   downvotes: 185,

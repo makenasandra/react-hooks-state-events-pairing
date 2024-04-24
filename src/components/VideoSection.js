@@ -7,7 +7,8 @@ function VideoSection({ videoDetails }) {
     const [upVotes, setUpvotes] = useState(upvotes);
     const [downVotes, setDownvotes] = useState(downvotes);
     const [showComments, setShowComments] = useState(true);
-    const [commentUpVotes, setCommentDownVotes] = useState(0)
+    const [commentUpVotes, setCommentDownVotes] = useState(0);
+    const [commentsToDisplay, setCommentsToDisplay] = useState(comments);
 
     function handleUpVoteClick(){
         setUpvotes(upvotes+1);
@@ -19,6 +20,10 @@ function VideoSection({ videoDetails }) {
     }
     function handleCommentsButton(){
         setShowComments(!showComments);
+    }
+    function removeComment(id){
+        console.log({id})
+    setCommentsToDisplay(commentsToDisplay.filter(comment=>!(comment.id===id)));
     }
     return (
     <div>
@@ -36,7 +41,7 @@ function VideoSection({ videoDetails }) {
         <button className="hide-comments" onClick={handleCommentsButton}>{showComments? "Hide Comments": "Show Comments"}</button>
         </div>
         <hr className="page-divider" /> {/* Divider */}
-        {showComments? <CommentsSection videoId={id} comments={comments} commentUpVotes={commentUpVotes} setCommentDownVotes={setCommentDownVotes}/>: <></>}
+        {showComments? <CommentsSection videoId={id} comments={commentsToDisplay} commentUpVotes={commentUpVotes} setCommentDownVotes={setCommentDownVotes} removeComment={removeComment}/>: <></>}
     </div>
 
 

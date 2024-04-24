@@ -28,7 +28,6 @@ function CommentsSection({videoId, commentId, commentUpVotes, setCommentDownVote
     return (
         <div>
             <button className="votes" onClick={handleUpVoteClick}>{storedUpVotes}{"\uD83D\uDC4D"}</button> <button className="votes" onClick={handleDownVotesClick}>{storedDownVotes}{"\uD83D\uDC4E"}</button>
-
         </div>
 
 
